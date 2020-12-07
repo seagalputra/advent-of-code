@@ -42,4 +42,11 @@ class ReportRepairTest {
 
         assertEquals(514579, expense);
     }
+
+    @Test
+    void shouldFoundThreeNumbersAndMultiplyThem() {
+        int expense = reportRepair.multiplyThreeEntries(inputs);
+
+        assertEquals(241861950, expense);
+    }
 }

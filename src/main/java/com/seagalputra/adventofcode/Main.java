@@ -11,5 +11,6 @@ public class Main {
         List<Integer> reports = Utils.readFileFrom(inputStream);
 
         System.out.println(reportRepair.multiplyEntries(reports));
+        System.out.println(reportRepair.multiplyThreeEntries(reports));
     }
 }
