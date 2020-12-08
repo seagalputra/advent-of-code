@@ -25,4 +25,20 @@ public class PasswordPhilosophy {
 
         return validCount;
     }
+
+    public int countValidPasswordFromPosition(List<PasswordPolicy> passwordPolicies) {
+
+        int valid = 0;
+        for (PasswordPolicy passwordPolicy : passwordPolicies) {
+
+            String[] characters = passwordPolicy.getBody().split("");
+
+            String character = String.valueOf(passwordPolicy.getCharacter());
+            if (characters[passwordPolicy.getMin() - 1].equals(character) ^ characters[passwordPolicy.getMax() - 1].equals(character)) {
+                valid++;
+            }
+        }
+
+        return valid;
+    }
 }

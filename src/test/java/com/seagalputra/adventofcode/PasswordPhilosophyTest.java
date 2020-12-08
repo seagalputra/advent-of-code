@@ -33,4 +33,11 @@ class PasswordPhilosophyTest {
 
         assertEquals(2, countedValidPassword);
     }
+
+    @Test
+    void shouldReturnNumberOfValidPasswordBasedOnPosition() {
+        int countedValidPassword = passwordPhilosophy.countValidPasswordFromPosition(passwordPolicies);
+
+        assertEquals(1, countedValidPassword);
+    }
 }

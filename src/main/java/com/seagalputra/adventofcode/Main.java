@@ -25,5 +25,6 @@ public class Main {
         });
 
         System.out.println(passwordPhilosophy.countValidPassword(passwordPolicies));
+        System.out.println(passwordPhilosophy.countValidPasswordFromPosition(passwordPolicies));
     }
 }
