@@ -21,19 +21,10 @@ class ReportRepairTest {
     @BeforeEach
     void setUp() {
         reportRepair = new ReportRepair();
-        inputs = new ArrayList<>();
 
         InputStream inputStream = getClass().getResourceAsStream("/day1_report_repair_test.txt");
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
-            String line;
 
-            while ((line = bufferedReader.readLine()) != null) {
-                Integer number = Integer.parseInt(line);
-                inputs.add(number);
-            }
-        } catch (IOException exception) {
-            exception.printStackTrace();
-        }
+        inputs = Utils.readFileFrom(inputStream, Integer::parseInt);
     }
 
     @Test
